@@ -1,0 +1,6 @@
+@echo off
+setlocal
+cd /d "%~dp0"
+flutter pub get
+flutter run
+pause

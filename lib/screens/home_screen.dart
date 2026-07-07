@@ -130,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       if (!mounted) return;
 
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Không chụp được ảnh: $e')),
+        SnackBar(content: Text('Không chụp được ảnh, vui lòng thử lại: $e')),
       );
     }
   }

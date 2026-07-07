@@ -46,7 +46,7 @@ class ImageQualityService {
     var score = 100;
 
     if (decoded.width < 700 || decoded.height < 700) {
-      warnings.add('Ảnh hơi nhỏ, nên chụp gần bảng điều khiển hơn.');
+      warnings.add('Ảnh hơi nhỏ, nên chụp gần hơn.');
       score -= 18;
     }
 
@@ -64,12 +64,12 @@ class ImageQualityService {
     }
 
     if (decoded.width / decoded.height > 3.2 || decoded.height / decoded.width > 3.2) {
-      warnings.add('Khung ảnh hơi lệch, nên để bảng điều khiển nằm gọn trong ảnh.');
+      warnings.add('Khung ảnh hơi lệch, nên để đối tượng nằm gọn trong ảnh.');
       score -= 12;
     }
 
     if (warnings.isNotEmpty) {
-      warnings.add('Khi chụp, hãy giữ camera song song với mặt bảng điều khiển.');
+      warnings.add('Khi chụp, hãy giữ camera song song với mặt đối tượng.');
     }
 
     return ImageQualityReport(

@@ -13,6 +13,7 @@ class ImageStorageService {
       await imageDir.create(recursive: true);
     }
 
+
     final ext = sourcePath.split('.').last.toLowerCase();
     final safeExt = ext.length <= 5 ? ext : 'jpg';
     final fileName = '${DateTime.now().millisecondsSinceEpoch}.$safeExt';
